@@ -1,0 +1,7 @@
+'use strict';
+function getWnuriMainTabConfig() {
+	var WnuriMainTabConfig = {
+		forecastTabFirst: true
+	};
+	return WnuriMainTabConfig;
+}

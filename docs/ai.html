@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>인공지능 블록 &mdash; https://tooee.org  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="데이터 수집 블록" href="data.html" />
+    <link rel="prev" title="뚜이 설치 방법" href="install.html" /> 
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $('.admonition.note > p.admonition-title').text('참고 사항');
+    });
+  </script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            https://tooee.org
+              <img src="_static/tooee_logo.jpg" class="logo" alt="Logo"/>
+          </a>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">설치하기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">뚜이 설치 방법</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">블록 사용 설명서</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">인공지능 블록</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">텍스트 학습</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">웹 이미지 학습</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">내 이미지 학습</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">화면 이미지 학습</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">확률 계산</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">모든 확률 계산 (선택사항)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">학습 내용 지우기</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">데이터 수집 블록</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large.html">대규모 학습</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remote.html">원격 접속 블록</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text.html">텍스트 및 파일 처리</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">처음 사용해 보기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mission1.html">미션 1: 외계인 찾기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mission2.html">미션 2: 열기구 띄우기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mission3.html">미션 3: 강아지와 고양이 분류하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mission4.html">미션 4: 숫자 맞히기</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">예제 프로그램</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="popdog.html">강아지 터치 게임</a></li>
+<li class="toctree-l1"><a class="reference internal" href="covid.html">코로나19 전광판</a></li>
+<li class="toctree-l1"><a class="reference internal" href="weather.html">일기예보 프로그램</a></li>
+<li class="toctree-l1"><a class="reference internal" href="movie.html">영화 평점 순위표</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chatbot.html">챗봇 프로그램</a></li>
+<li class="toctree-l1"><a class="reference internal" href="celebrities.html">닮은꼴 연예인 찾기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chat.html">채팅 프로그램</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">프로그램 공유하기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="html.html">HTML 파일 만들기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exe.html">실행파일 만들기</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">질문과 답변</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="email.html">문의하기</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">https://tooee.org</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">인공지능 블록</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>인공지능 블록<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<ol class="arabic simple">
+<li><p>아래의 파일을 클릭하여 내려받습니다.</p></li>
+</ol>
+<ul class="simple">
+<li><p><a class="reference external" href="https://tooee.org/Tooee_v6.0_AI.sb3">Tooee_v6.0_AI.sb3</a></p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p><strong>노란색</strong> 프로그램에서 <strong>파일 → 불러오기</strong>를 클릭하고, 내려받은 파일을 선택한 후 <strong>열기</strong> 버튼을 누릅니다.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>파일을 더블클릭하시면 잘 열리지 않을 때가 있습니다. 파일을 선택하신 후 <strong>열기</strong> 버튼을 클릭해 주세요.</p>
+</div>
+<section id="id2">
+<h2>텍스트 학습<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>텍스트 학습</strong> 스프라이트를 클릭하고, 아래의 코드 블록을 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/ai1.png"><img alt="_images/ai1.png" src="_images/ai1.png" style="width: 100%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><strong>Data 폴더</strong>의 <strong>Tooee.xlsx</strong> 엑셀 파일을 열어 아래와 같이 학습된 내용을 확인합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/excel1.png"><img alt="_images/excel1.png" src="_images/excel1.png" style="width: 100%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>내 점수</strong> 대신에 <strong>점수</strong>, <strong>나의 점수</strong>등 비슷한 표현을 물어보더라도 <strong>10</strong>이라고 대답하는지 확인해 보세요.</p>
+</div>
+</section>
+<section id="id3">
+<h2>웹 이미지 학습<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>웹 이미지 학습</strong> 스프라이트를 클릭하고, 아래의 코드 블록을 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/ai2.png"><img alt="_images/ai2.png" src="_images/ai2.png" style="width: 100%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><strong>Data 폴더</strong>의 <strong>Tooee.xlsx</strong> 엑셀 파일을 열어 아래와 같이 학습된 내용을 확인합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/excel2.png"><img alt="_images/excel2.png" src="_images/excel2.png" style="width: 100%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>웹에 있는 다른 강아지 이미지를 물어보더라도 <strong>강아지</strong>라고 대답하는지 확인해 보세요.</p>
+</div>
+</section>
+<section id="id4">
+<h2>내 이미지 학습<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>아래의 파일을 <strong>Data 폴더</strong>에 내려받습니다.</p></li>
+</ol>
+<ul class="simple">
+<li><p><a class="reference external" href="https://tooee.org/rabbit.png">rabbit.png</a></p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p><strong>내 이미지 학습</strong> 스프라이트를 클릭하고, 아래의 코드 블록을 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/ai3.png"><img alt="_images/ai3.png" src="_images/ai3.png" style="width: 100%;" /></a>
+<ol class="arabic simple" start="3">
+<li><p><strong>Data 폴더</strong>의 <strong>Tooee.xlsx</strong> 엑셀 파일을 열어 아래와 같이 학습된 내용을 확인합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/excel3.png"><img alt="_images/excel3.png" src="_images/excel3.png" style="width: 100%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>rabbit.png</strong> 파일을 학습시키기 위해서는, <strong>Data 폴더</strong>에 <strong>rabbit.png</strong> 파일이 있어야 합니다.</p>
+</div>
+</section>
+<section id="id5">
+<h2>화면 이미지 학습<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>화면 이미지 학습</strong> 스프라이트를 클릭하고, 아래의 코드 블록을 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/ai4.png"><img alt="_images/ai4.png" src="_images/ai4.png" style="width: 100%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><strong>Data 폴더</strong>의 <strong>Tooee.xlsx</strong> 엑셀 파일을 열어 아래와 같이 학습된 내용을 확인합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/excel4.png"><img alt="_images/excel4.png" src="_images/excel4.png" style="width: 100%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>화면</strong> 블록은 <strong>#화면</strong>이라는 값을 가집니다. <strong>화면</strong> 블록 대신에 <strong>#화면</strong>이라고 타이핑해도 됩니다.</p>
+</div>
+</section>
+<section id="id6">
+<h2>확률 계산<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>확률 계산</strong> 스프라이트를 클릭하고, 아래의 코드 블록을 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/ai5.png"><img alt="_images/ai5.png" src="_images/ai5.png" style="width: 100%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>뚜이는 이 이미지가 <strong>강아지</strong>이고, 그 확률은 <strong>100%</strong>라고 생각한다면, <strong>강아지</strong>, <strong>100</strong>이 각각 나타납니다.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>확률</strong> 블록을 사용하면, <strong>뚜이의 대답에 대한 확률</strong>을 물어봅니다. 따라서 이 블록을 사용하기 전에 뚜이가 무엇인가를 대답했어야 합니다.</p>
+<p><strong>확률</strong> 블록은 <strong>#확률</strong>이라는 값을 가집니다. <strong>확률</strong> 블록 대신에 <strong>#확률</strong>이라고 타이핑해도 됩니다.</p>
+</div>
+</section>
+<section id="id7">
+<h2>모든 확률 계산 (선택사항)<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>모든 확률 계산</strong> 스프라이트를 클릭하고, 아래의 코드 블록을 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/ai6.png"><img alt="_images/ai6.png" src="_images/ai6.png" style="width: 100%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>만약 <strong>강아지</strong>일 확률이 <strong>100%</strong>, <strong>토끼</strong>일 확률이 <strong>65%</strong>라면, <strong>강아지</strong>, <strong>100</strong>, <strong>토끼</strong>, <strong>65</strong>가 각각 나타납니다.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>모든 확률</strong>을 물어볼 때 뚜이는 하나씩 대답하기 때문에 여러 번 물어봐야 합니다.</p>
+<p><strong>모든 확률</strong> 블록은 <strong>#모든확률</strong>이라는 값을 가집니다. <strong>#모든확률</strong>이라고 바로 타이핑해도 됩니다.</p>
+</div>
+</section>
+<section id="id8">
+<h2>학습 내용 지우기<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Data 폴더</strong>에 있는 <strong>Tooee.model</strong> 파일을 삭제합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/model.png"><img alt="_images/model.png" src="_images/model.png" style="width: 15%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>바탕화면의 <strong>Tooee 아이콘</strong>을 <strong>더블클릭</strong>하여 다시 프로그램을 시작합니다.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>프로그램이 시작될 때, 뚜이는 Data 폴더에 있는 모든 model 파일들의 내용을 가져옵니다.</p>
+<p>학습된 내용을 지우려면 <strong>Tooee.xlsx</strong> 파일이 아닌 <strong>Tooee.model</strong> 파일을 삭제해야 합니다.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

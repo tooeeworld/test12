@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>텍스트 및 파일 처리 &mdash; https://tooee.org  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="미션 1: 외계인 찾기" href="mission1.html" />
+    <link rel="prev" title="원격 접속 블록" href="remote.html" /> 
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $('.admonition.note > p.admonition-title').text('참고 사항');
+    });
+  </script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            https://tooee.org
+              <img src="_static/tooee_logo.jpg" class="logo" alt="Logo"/>
+          </a>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">설치하기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">뚜이 설치 방법</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">블록 사용 설명서</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ai.html">인공지능 블록</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">데이터 수집 블록</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large.html">대규모 학습</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remote.html">원격 접속 블록</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">텍스트 및 파일 처리</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">파일이름 바꾸기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">파일 읽기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">파일 목록 가져오기 (선택사항)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">자소 분리하기 (선택사항)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">화면에 글쓰기 (선택사항)</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">처음 사용해 보기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mission1.html">미션 1: 외계인 찾기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mission2.html">미션 2: 열기구 띄우기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mission3.html">미션 3: 강아지와 고양이 분류하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mission4.html">미션 4: 숫자 맞히기</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">예제 프로그램</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="popdog.html">강아지 터치 게임</a></li>
+<li class="toctree-l1"><a class="reference internal" href="covid.html">코로나19 전광판</a></li>
+<li class="toctree-l1"><a class="reference internal" href="weather.html">일기예보 프로그램</a></li>
+<li class="toctree-l1"><a class="reference internal" href="movie.html">영화 평점 순위표</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chatbot.html">챗봇 프로그램</a></li>
+<li class="toctree-l1"><a class="reference internal" href="celebrities.html">닮은꼴 연예인 찾기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chat.html">채팅 프로그램</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">프로그램 공유하기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="html.html">HTML 파일 만들기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exe.html">실행파일 만들기</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">질문과 답변</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="email.html">문의하기</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">https://tooee.org</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">텍스트 및 파일 처리</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>텍스트 및 파일 처리<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<ol class="arabic simple">
+<li><p>아래의 파일을 클릭하여 내려받습니다.</p></li>
+</ol>
+<ul class="simple">
+<li><p><a class="reference external" href="https://tooee.org/Tooee_v6.0_TF.sb3">Tooee_v6.0_TF.sb3</a></p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p><strong>노란색</strong> 프로그램에서 <strong>파일 → 불러오기</strong>를 클릭하고, 내려받은 파일을 선택한 후 <strong>열기</strong> 버튼을 누릅니다.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>파일을 더블클릭하시면 잘 열리지 않을 때가 있습니다. 파일을 선택하신 후 <strong>열기</strong> 버튼을 클릭해 주세요.</p>
+</div>
+<section id="id2">
+<h2>파일이름 바꾸기<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>파일이름 바꾸기</strong> 스프라이트를 클릭하고, 아래의 코드 블록을 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/tf1.png"><img alt="_images/tf1.png" src="_images/tf1.png" style="width: 100%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><strong>Data</strong> 폴더에 생성된 파일들을 확인합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/tf1-2.png"><img alt="_images/tf1-2.png" src="_images/tf1-2.png" style="width: 80%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>저장할 파일이름</strong> 블록은 <strong>#저장</strong>이라는 값을 가지므로, <strong>#저장</strong>이라고 바로 타이핑해도 됩니다.</p>
+<p>프로그램이 시작될 때, 뚜이는 Data 폴더에 있는 모든 model 파일들의 내용을 가져옵니다.</p>
+</div>
+</section>
+<section id="id3">
+<h2>파일 읽기<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>아래 파일을 클릭하여 내용을 확인합니다. 아래 그림과 같은 내용이 나타냅니다.</p></li>
+</ol>
+<ul class="simple">
+<li><p><a class="reference external" href="https://tooee.org/gpt.txt">gpt.txt</a></p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/tf2-3.png"><img alt="_images/tf2-3.png" src="_images/tf2-3.png" style="width: 50%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><strong>파일 읽기</strong> 스프라이트를 클릭하고, 아래의 코드 블록을 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/tf2.png"><img alt="_images/tf2.png" src="_images/tf2.png" style="width: 100%;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>아래 그림처럼 파일의 내용을 하나씩 가져오는지 확인합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/tf2-2.png"><img alt="_images/tf2-2.png" src="_images/tf2-2.png" style="width: 50%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>줄바꿈 기호 또는 탭 기호를 기준으로 내용을 나누어 하나씩 가져옵니다.</p>
+<p>다시 처음부터 파일 내용을 읽으려면 뚜이에게 다른 것을 물어본 다음에 다시 파일 내용을 물어보세요.</p>
+</div>
+</section>
+<section id="id4">
+<h2>파일 목록 가져오기 (선택사항)<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>파일 목록 가져오기</strong> 스프라이트를 클릭하고, 아래의 코드 블록을 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/tf3.png"><img alt="_images/tf3.png" src="_images/tf3.png" style="width: 100%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><strong>Data</strong> 폴더에 있는 파일 목록을 하나씩 가져오는지 확인합니다.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>파일목록</strong> 블록은 <strong>#파일</strong>이라는 값을 가집니다. <strong>파일목록</strong> 블록 대신에 <strong>#파일</strong>이라고 타이핑해도 됩니다.</p>
+</div>
+</section>
+<section id="id5">
+<h2>자소 분리하기 (선택사항)<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>자소 분리하기</strong> 스프라이트를 클릭하고, 아래의 코드 블록을 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/tf4.png"><img alt="_images/tf4.png" src="_images/tf4.png" style="width: 100%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>자소가 분리된 한글을 잘 대답하는지 확인합니다.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>자소 분리할 한글</strong> 블록은 <strong>#한글</strong>이라는 값을 가지므로, <strong>#한글</strong>이라고 바로 타이핑해도 됩니다.</p>
+</div>
+</section>
+<section id="id6">
+<h2>화면에 글쓰기 (선택사항)<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>화면에 글쓰기</strong> 스프라이트를 클릭하고, 아래의 코드 블록을 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/tf5.png"><img alt="_images/tf5.png" src="_images/tf5.png" style="width: 100%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><strong>글의 모양</strong>이 <strong>7</strong>, <strong>글의 크기</strong>가 <strong>50</strong>, <strong>글의 색깔</strong>이 <strong>파란색</strong>인 <strong>안녕하세요?</strong>가 화면에 나타나는지 확인합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/tf5-2.png"><img alt="_images/tf5-2.png" src="_images/tf5-2.png" style="width: 30%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>글의 모양</strong> 블록은 <strong>#글꼴</strong>이라는 값을 가집니다. <strong>글의 모양</strong> 블록 대신에 <strong>#글꼴</strong>이라고 타이핑해도 됩니다.</p>
+<p><strong>글의 크기</strong> 블록은 <strong>#크기</strong>이라는 값을 가집니다. <strong>글의 크기</strong> 블록 대신에 <strong>#크기</strong>이라고 타이핑해도 됩니다.</p>
+<p><strong>글의 색깔</strong> 블록은 <strong>#색깔</strong>이라는 값을 가집니다. <strong>글의 색깔</strong> 블록 대신에 <strong>#색깔</strong>이라고 타이핑해도 됩니다.</p>
+<p><strong>쓸 글</strong> 블록은 <strong>#글</strong>이라는 값을 가집니다. <strong>쓸 글</strong> 블록 대신에 <strong>#글</strong>이라고 타이핑해도 됩니다.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

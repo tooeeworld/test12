@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Noto';
+    src: url('NanumSquareRoundR.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, h1, h2, h3, li, p {
+    font-family: 'Noto', sans-serif;
+}

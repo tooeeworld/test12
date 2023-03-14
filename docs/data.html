@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>데이터 수집 블록 &mdash; https://tooee.org  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="대규모 학습" href="large.html" />
+    <link rel="prev" title="인공지능 블록" href="ai.html" /> 
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $('.admonition.note > p.admonition-title').text('참고 사항');
+    });
+  </script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            https://tooee.org
+              <img src="_static/tooee_logo.jpg" class="logo" alt="Logo"/>
+          </a>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">설치하기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">뚜이 설치 방법</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">블록 사용 설명서</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ai.html">인공지능 블록</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">데이터 수집 블록</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">개발자 도구 사용해 보기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">수집하기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">클릭하기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">전체 수집하기 (선택사항)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">스크롤하기 (선택사항)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">마우스 자동화 (선택사항)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">키보드 자동화 (선택사항)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="large.html">대규모 학습</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remote.html">원격 접속 블록</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text.html">텍스트 및 파일 처리</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">처음 사용해 보기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mission1.html">미션 1: 외계인 찾기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mission2.html">미션 2: 열기구 띄우기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mission3.html">미션 3: 강아지와 고양이 분류하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mission4.html">미션 4: 숫자 맞히기</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">예제 프로그램</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="popdog.html">강아지 터치 게임</a></li>
+<li class="toctree-l1"><a class="reference internal" href="covid.html">코로나19 전광판</a></li>
+<li class="toctree-l1"><a class="reference internal" href="weather.html">일기예보 프로그램</a></li>
+<li class="toctree-l1"><a class="reference internal" href="movie.html">영화 평점 순위표</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chatbot.html">챗봇 프로그램</a></li>
+<li class="toctree-l1"><a class="reference internal" href="celebrities.html">닮은꼴 연예인 찾기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chat.html">채팅 프로그램</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">프로그램 공유하기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="html.html">HTML 파일 만들기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exe.html">실행파일 만들기</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">질문과 답변</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="email.html">문의하기</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">https://tooee.org</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">데이터 수집 블록</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>데이터 수집 블록<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<ol class="arabic simple">
+<li><p>아래의 파일을 클릭하여 내려받습니다.</p></li>
+</ol>
+<ul class="simple">
+<li><p><a class="reference external" href="https://tooee.org/Tooee_v6.0_DC.sb3">Tooee_v6.0_DC.sb3</a></p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p><strong>노란색</strong> 프로그램에서 <strong>파일 → 불러오기</strong>를 클릭하고, 내려받은 파일을 선택한 후 <strong>열기</strong> 버튼을 누릅니다.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>파일을 더블클릭하시면 잘 열리지 않을 때가 있습니다. 파일을 선택하신 후 <strong>열기</strong> 버튼을 클릭해 주세요.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>크롬 브라우저</strong>가 설치되어 있지 않다면, <strong>크롬 브라우저</strong>를 설치해 주세요.</p></li>
+</ol>
+<section id="id2">
+<h2>개발자 도구 사용해 보기<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>크롬 브라우저를 실행하고, <a class="reference external" href="https://tooee.org/m/">https://tooee.org/m/</a> 사이트에 접속합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/dt1.png"><img alt="_images/dt1.png" src="_images/dt1.png" style="width: 100%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><strong>CTRL+SHIFT+C</strong>를 누르면, 아래 그림과 같이 <strong>개발자 도구</strong>가 나타납니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/dt2.png"><img alt="_images/dt2.png" src="_images/dt2.png" style="width: 100%;" /></a>
+<ol class="arabic simple" start="3">
+<li><p><strong>영화 순위</strong> 영역을 클릭해 보세요. 개발자 도구에서 <strong>&lt;h1&gt;영화 순위&lt;/h1&gt;</strong>이 선택됩니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/dt3.png"><img alt="_images/dt3.png" src="_images/dt3.png" style="width: 100%;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>개발자 도구에서 선택된 <strong>&lt;h1&gt;영화 순위&lt;/h1&gt;</strong>에 마우스 우클릭하고, <strong>Copy → Copy full XPath</strong>를 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/dt4.png"><img alt="_images/dt4.png" src="_images/dt4.png" style="width: 100%;" /></a>
+<ol class="arabic simple" start="5">
+<li><p><strong>메모장</strong> 프로그램을 열어 <strong>CTRL+V</strong>를 누르면, <strong>영화 순위</strong> 영역을 의미하는 <strong>full XPath</strong>가 나타납니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/dt5.png"><img alt="_images/dt5.png" src="_images/dt5.png" style="width: 50%;" /></a>
+</section>
+<section id="id3">
+<h2>수집하기<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>노란색 프로그램</strong>에서 <strong>수집하기</strong> 스프라이트를 클릭하고, 아래의 코드 블록을 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/dc1.png"><img alt="_images/dc1.png" src="_images/dc1.png" style="width: 80%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>영화 사이트에 자동으로 접속이 되는지, 뚜이가 <strong>영화 순위</strong>라고 대답했는지 확인합니다.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>접속할 주소</strong> 블록은 <strong>#접속</strong>이라는 값을 가집니다. <strong>#접속</strong>이라고 타이핑해도 됩니다.</p>
+<p><strong>수집할 영역</strong> 블록은 <strong>#수집</strong>이라는 값을 가집니다. <strong>#수집</strong>이라고 타이핑해도 됩니다.</p>
+<p>수집할 영역에 <strong>영화 순위</strong>의 <strong>full XPath</strong>를 입력하였기 때문에 <strong>영화 순위</strong>가 수집됩니다.</p>
+</div>
+</section>
+<section id="id4">
+<h2>클릭하기<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>클릭하기</strong> 스프라이트를 클릭하고, 아래의 코드 블록을 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/dc2.png"><img alt="_images/dc2.png" src="_images/dc2.png" style="width: 80%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>영화 사이트 접속 후, <strong>타이타닉 이미지</strong>가 자동으로 클릭되어 영화 정보가 나타나는지 확인합니다.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>접속할 주소</strong> 블록은 <strong>#접속</strong>이라는 값을 가집니다. <strong>#접속</strong>이라고 타이핑해도 됩니다.</p>
+<p><strong>클릭할 영역</strong> 블록은 <strong>#클릭</strong>이라는 값을 가집니다. <strong>#수집</strong>이라고 타이핑해도 됩니다.</p>
+<p>클릭할 영역에 <strong>타이타닉 이미지</strong>의 <strong>full XPath</strong>를 입력하였기 때문에 <strong>타이타닉 이미지</strong>가 클릭됩니다.</p>
+</div>
+</section>
+<section id="id5">
+<h2>전체 수집하기 (선택사항)<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>전체 수집하기</strong> 스프라이트를 클릭하고, 아래의 코드 블록을 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/dc3.png"><img alt="_images/dc3.png" src="_images/dc3.png" style="width: 80%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>뚜이가 <strong>영화 순위</strong> 영역을 <strong>전체 수집</strong>하고, 그 중 일부를 추출하여 <strong>영화 순위</strong>라고 대답했는지 확인합니다.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>접속할 주소</strong> 블록은 <strong>#접속</strong>이라는 값을 가집니다. <strong>#접속</strong>이라고 타이핑해도 됩니다.</p>
+<p><strong>전체 수집할 영역</strong> 블록은 <strong>#전체수집</strong>이라는 값을 가집니다. <strong>#전체수집</strong>이라고 타이핑해도 됩니다.</p>
+<p><strong>추출할 영역</strong> 블록은 <strong>#추출</strong>이라는 값을 가집니다. <strong>#추출</strong>이라고 타이핑해도 됩니다.</p>
+<p>전체 수집할 영역에 <strong>영화 순위</strong>의 <strong>full XPath</strong>를 입력하였기 때문에 <strong>영화 순위</strong> 영역이 전체 수집됩니다.</p>
+<p>추출할 영역의 <strong>&lt;h1&gt;…&lt;/h1&gt;</strong>는 전체 수집된 내용의 <strong>&lt;h1&gt;</strong>과 <strong>&lt;/h1&gt;</strong>의 사이에 있는 내용을 의미합니다.</p>
+</div>
+</section>
+<section id="id6">
+<h2>스크롤하기 (선택사항)<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>스크롤하기</strong> 스프라이트를 클릭하고, 아래의 코드 블록을 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/dc4.png"><img alt="_images/dc4.png" src="_images/dc4.png" style="width: 80%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>질병관리청 사이트 접속 후, 자동으로 스크롤이 되는지 확인합니다.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>접속할 주소</strong> 블록은 <strong>#접속</strong>이라는 값을 가집니다. <strong>#접속</strong>이라고 타이핑해도 됩니다.</p>
+<p><strong>스크롤할 영역</strong> 블록은 <strong>#스크롤</strong>이라는 값을 가집니다. <strong>#스크롤</strong>이라고 타이핑해도 됩니다.</p>
+<p>스크롤할 영역에 <strong>전체 웹페이지</strong> 영역의 <strong>full XPath</strong>를 입력하였기 때문에, <strong>전체 웹페이지</strong>가 스크롤됩니다.</p>
+</div>
+</section>
+<section id="id7">
+<h2>마우스 자동화 (선택사항)<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>마우스 자동화</strong> 스프라이트를 클릭하고, 아래의 코드 블록을 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/dc5.png"><img alt="_images/dc5.png" src="_images/dc5.png" style="width: 80%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><strong>마우스 위치</strong>를 알 수 있는지, <strong>클릭</strong>, <strong>우클릭</strong>, <strong>더블클릭</strong>, <strong>드래그&amp;드롭</strong>이 자동으로 잘 되는지 확인합니다.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>마우스 위치</strong> 블록은 <strong>#위치</strong>이라는 값을 가집니다. <strong>#위치</strong>라고 타이핑해도 됩니다.</p>
+<p><strong>클릭할 영역</strong> 블록은 <strong>#클릭</strong>이라는 값을 가집니다. <strong>#클릭</strong>이라고 타이핑해도 됩니다.</p>
+<p><strong>우클릭할 영역</strong> 블록은 <strong>#우클릭</strong>이라는 값을 가집니다. <strong>#우클릭</strong>이라고 타이핑해도 됩니다.</p>
+<p><strong>더블클릭할 영역</strong> 블록은 <strong>#더블클릭</strong>이라는 값을 가집니다. <strong>#더블클릭</strong>이라고 타이핑해도 됩니다.</p>
+<p><strong>드래그할 영역</strong> 블록은 <strong>#드래그</strong>이라는 값을 가집니다. <strong>#드래그</strong>라고 타이핑해도 됩니다.</p>
+<p><strong>100 300</strong>은 <strong>x, y 좌표</strong>가 각각 <strong>100, 300</strong>인 위치를 의미합니다.</p>
+<p><strong>1000 700 1300 700</strong>은 <strong>x, y 좌표</strong>가 각각 <strong>1000, 700</strong>인 위치와 <strong>1300, 700</strong>인 위치를 의미합니다.</p>
+</div>
+</section>
+<section id="id8">
+<h2>키보드 자동화 (선택사항)<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>키보드 자동화</strong> 스프라이트를 클릭하고, 아래의 코드 블록을 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/dc6.png"><img alt="_images/dc6.png" src="_images/dc6.png" style="width: 75%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><strong>왼쪽 화살표 키</strong>와 <strong>CTRL+A 키</strong>가 잘 눌리는지, <strong>안녕하세요?</strong>가 잘 입력되는지 확인합니다.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>입력할 키</strong> 블록은 <strong>#키</strong>라는 값을 가집니다. <strong>#키</strong>라고 타이핑해도 됩니다.</p>
+<p><strong>입력할 문자</strong> 블록은 <strong>#입력</strong>이라는 값을 가집니다. <strong>#입력</strong>이라고 타이핑해도 됩니다.</p>
+<p>입력할 수 있는 <strong>키</strong>는 아래와 같습니다.</p>
+<p>‘t’, ‘n’, ‘r’, ‘ ‘, ‘!’, ‘”’, ‘#’, ‘$’, ‘%’, ‘&amp;’, “’”, ‘(‘,
+‘)’, ‘*’, ‘+’, ‘,’, ‘-’, ‘.’, ‘/’, ‘0’, ‘1’, ‘2’, ‘3’, ‘4’, ‘5’, ‘6’, ‘7’,
+‘8’, ‘9’, ‘:’, ‘;’, ‘&lt;’, ‘=’, ‘&gt;’, ‘?’, ‘&#64;’, ‘[’, ‘\’, ‘]’, ‘^’, ‘_’, ‘`’,
+‘a’, ‘b’, ‘c’, ‘d’, ‘e’,’f’, ‘g’, ‘h’, ‘i’, ‘j’, ‘k’, ‘l’, ‘m’, ‘n’, ‘o’,
+‘p’, ‘q’, ‘r’, ‘s’, ‘t’, ‘u’, ‘v’, ‘w’, ‘x’, ‘y’, ‘z’, ‘{’, ‘|’, ‘}’, ‘~’,
+‘accept’, ‘add’, ‘alt’, ‘altleft’, ‘altright’, ‘apps’, ‘backspace’,
+‘browserback’, ‘browserfavorites’, ‘browserforward’, ‘browserhome’,
+‘browserrefresh’, ‘browsersearch’, ‘browserstop’, ‘capslock’, ‘clear’,
+‘convert’, ‘ctrl’, ‘ctrlleft’, ‘ctrlright’, ‘decimal’, ‘del’, ‘delete’,
+‘divide’, ‘down’, ‘end’, ‘enter’, ‘esc’, ‘escape’, ‘execute’, ‘f1’, ‘f10’,
+‘f11’, ‘f12’, ‘f13’, ‘f14’, ‘f15’, ‘f16’, ‘f17’, ‘f18’, ‘f19’, ‘f2’, ‘f20’,
+‘f21’, ‘f22’, ‘f23’, ‘f24’, ‘f3’, ‘f4’, ‘f5’, ‘f6’, ‘f7’, ‘f8’, ‘f9’,
+‘final’, ‘fn’, ‘hanguel’, ‘hangul’, ‘hanja’, ‘help’, ‘home’, ‘insert’, ‘junja’,
+‘kana’, ‘kanji’, ‘launchapp1’, ‘launchapp2’, ‘launchmail’,
+‘launchmediaselect’, ‘left’, ‘modechange’, ‘multiply’, ‘nexttrack’,
+‘nonconvert’, ‘num0’, ‘num1’, ‘num2’, ‘num3’, ‘num4’, ‘num5’, ‘num6’,
+‘num7’, ‘num8’, ‘num9’, ‘numlock’, ‘pagedown’, ‘pageup’, ‘pause’, ‘pgdn’,
+‘pgup’, ‘playpause’, ‘prevtrack’, ‘print’, ‘printscreen’, ‘prntscrn’,
+‘prtsc’, ‘prtscr’, ‘return’, ‘right’, ‘scrolllock’, ‘select’, ‘separator’,
+‘shift’, ‘shiftleft’, ‘shiftright’, ‘sleep’, ‘space’, ‘stop’, ‘subtract’, ‘tab’,
+‘up’, ‘volumedown’, ‘volumemute’, ‘volumeup’, ‘win’, ‘winleft’, ‘winright’, ‘yen’,
+‘command’, ‘option’, ‘optionleft’, ‘optionright’</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

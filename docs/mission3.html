@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>미션 3: 강아지와 고양이 분류하기 &mdash; https://tooee.org  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="미션 4: 숫자 맞히기" href="mission4.html" />
+    <link rel="prev" title="미션 2: 열기구 띄우기" href="mission2.html" /> 
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $('.admonition.note > p.admonition-title').text('참고 사항');
+    });
+  </script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            https://tooee.org
+              <img src="_static/tooee_logo.jpg" class="logo" alt="Logo"/>
+          </a>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">설치하기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">뚜이 설치 방법</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">블록 사용 설명서</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ai.html">인공지능 블록</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">데이터 수집 블록</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large.html">대규모 학습</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remote.html">원격 접속 블록</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text.html">텍스트 및 파일 처리</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">처음 사용해 보기</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="mission1.html">미션 1: 외계인 찾기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mission2.html">미션 2: 열기구 띄우기</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">미션 3: 강아지와 고양이 분류하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mission4.html">미션 4: 숫자 맞히기</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">예제 프로그램</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="popdog.html">강아지 터치 게임</a></li>
+<li class="toctree-l1"><a class="reference internal" href="covid.html">코로나19 전광판</a></li>
+<li class="toctree-l1"><a class="reference internal" href="weather.html">일기예보 프로그램</a></li>
+<li class="toctree-l1"><a class="reference internal" href="movie.html">영화 평점 순위표</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chatbot.html">챗봇 프로그램</a></li>
+<li class="toctree-l1"><a class="reference internal" href="celebrities.html">닮은꼴 연예인 찾기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chat.html">채팅 프로그램</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">프로그램 공유하기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="html.html">HTML 파일 만들기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exe.html">실행파일 만들기</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">질문과 답변</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="email.html">문의하기</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">https://tooee.org</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">미션 3: 강아지와 고양이 분류하기</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>미션 3: 강아지와 고양이 분류하기<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<p>“강아지와 고양이 친구들이 뚜이를 좋아하네! 뚜이가 우리집 강아지한테 간식 한 번 줘볼래?”</p>
+<p>“어떤 친구가 강아지고 어떤 친구가 고양이야? 사실 나는 강아지와 고양이를 잘 모르거든!”</p>
+<p>“그렇구나, 뚜이야! 괜찮아, 내가 알려줄게! 우리 같이 배워볼까?”</p>
+<a class="reference internal image-reference" href="_images/t3.png"><img alt="_images/t3.png" src="_images/t3.png" style="width: 80%;" /></a>
+<hr class="docutils" />
+<p>프로그램 소스 코드는 아래 링크를 통해 내려받으실 수 있습니다.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://tooee.org/Tooee_v6.0_M3.sb3">Tooee_v6.0_M3.sb3</a></p></li>
+</ul>
+<p><strong>초록색 깃발</strong> 버튼을 눌러 프로그램을 시작합니다.</p>
+<p><strong>강아지</strong> 버튼을 누르면, 현재 화면에 보이는 것이 <strong>강아지</strong>라고 학습합니다.</p>
+<p><strong>고양이</strong> 버튼을 누르면, 현재 화면에 보이는 것이 <strong>고양이</strong>라고 학습합니다.</p>
+<p><strong>스페이스 키</strong>를 누르면, <strong>강아지</strong>일 <strong>확률</strong>이 높을수록 <strong>긴 파란색 선</strong>을 보여줍니다.</p>
+<a class="reference internal image-reference" href="_images/m3-1.png"><img alt="_images/m3-1.png" src="_images/m3-1.png" style="width: 50%;" /></a>
+<p><strong>스페이스 키</strong>를 누르면, <strong>고양이</strong>일 <strong>확률</strong>이 높을수록 <strong>긴 빨간색 선</strong>을 보여줍니다.</p>
+<a class="reference internal image-reference" href="_images/m3-2.png"><img alt="_images/m3-2.png" src="_images/m3-2.png" style="width: 50%;" /></a>
+<hr class="docutils" />
+<p>“뚜이야, 이제 강아지와 고양이를 구별할 수 있겠지?”</p>
+<p>“고마워 친구야! 덕분에 강아지와 고양이 친구들과 더 친해질 수 있었어!”</p>
+<p>“그런데 뚜이야! 우리 강아지 간식이 똑 떨어졌어. 내일도 줘야 하는데 큰일이네! 우리 같이 사러 갈래?”</p>
+<p>“그래 좋아! 같이 가자!”</p>
+<a class="reference internal image-reference" href="_images/m3.png"><img alt="_images/m3.png" src="_images/m3.png" style="width: 80%;" /></a>
+</section>
+
+
+           </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>원격 접속 블록 &mdash; https://tooee.org  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="텍스트 및 파일 처리" href="text.html" />
+    <link rel="prev" title="대규모 학습" href="large.html" /> 
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $('.admonition.note > p.admonition-title').text('참고 사항');
+    });
+  </script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            https://tooee.org
+              <img src="_static/tooee_logo.jpg" class="logo" alt="Logo"/>
+          </a>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">설치하기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">뚜이 설치 방법</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">블록 사용 설명서</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ai.html">인공지능 블록</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">데이터 수집 블록</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large.html">대규모 학습</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">원격 접속 블록</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">원격 접속 허용하기 (선택사항)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">내 컴퓨터의 주소 찾기 (선택사항)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">내 컴퓨터로 접속하기 (선택사항)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="text.html">텍스트 및 파일 처리</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">처음 사용해 보기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mission1.html">미션 1: 외계인 찾기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mission2.html">미션 2: 열기구 띄우기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mission3.html">미션 3: 강아지와 고양이 분류하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mission4.html">미션 4: 숫자 맞히기</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">예제 프로그램</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="popdog.html">강아지 터치 게임</a></li>
+<li class="toctree-l1"><a class="reference internal" href="covid.html">코로나19 전광판</a></li>
+<li class="toctree-l1"><a class="reference internal" href="weather.html">일기예보 프로그램</a></li>
+<li class="toctree-l1"><a class="reference internal" href="movie.html">영화 평점 순위표</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chatbot.html">챗봇 프로그램</a></li>
+<li class="toctree-l1"><a class="reference internal" href="celebrities.html">닮은꼴 연예인 찾기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chat.html">채팅 프로그램</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">프로그램 공유하기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="html.html">HTML 파일 만들기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exe.html">실행파일 만들기</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">질문과 답변</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="email.html">문의하기</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">https://tooee.org</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">원격 접속 블록</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>원격 접속 블록<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<ol class="arabic simple">
+<li><p>아래의 파일을 클릭하여 내려받습니다.</p></li>
+</ol>
+<ul class="simple">
+<li><p><a class="reference external" href="https://tooee.org/Tooee_v6.0_RM.sb3">Tooee_v6.0_RM.sb3</a></p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p><strong>노란색</strong> 프로그램에서 <strong>파일 → 불러오기</strong>를 클릭하고, 내려받은 파일을 선택한 후 <strong>열기</strong> 버튼을 누릅니다.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>파일을 더블클릭하시면 잘 열리지 않을 때가 있습니다. 파일을 선택하신 후 <strong>열기</strong> 버튼을 클릭해 주세요.</p>
+<p>이 블록들을 사용하려면 <strong>내 컴퓨터</strong>와 <strong>내 컴퓨터에 접속할 컴퓨터</strong>가 <strong>같은 와이파이</strong>를 사용해야 합니다.</p>
+<p>블록이 잘 동작하지 않으면, 2.4G, 5G 등 여러 와이파이가 사용 가능한 경우 와이파이를 바꾸어 보세요.</p>
+</div>
+<section id="id2">
+<h2>원격 접속 허용하기 (선택사항)<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>원격 접속 허용하기</strong> 스프라이트를 클릭하고, 아래의 <strong>두 번째 블록</strong>을 클릭하여 원격 접속을 허용합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/rm1.png"><img alt="_images/rm1.png" src="_images/rm1.png" style="width: 100%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>원격 접속</strong> 블록은 <strong>#원격</strong>이라는 값을 가지므로, <strong>#원격</strong>이라고 바로 타이핑해도 됩니다.</p>
+<p><strong>허용하지 않을 것</strong> 블록은 <strong>x</strong>라는 값을 가지므로, <strong>x</strong>라고 바로 타이핑해도 됩니다.</p>
+<p><strong>허용할 것</strong> 블록은 <strong>o</strong>라는 값을 가지므로, <strong>o</strong>라고 바로 타이핑해도 됩니다.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>프로그램을 재시작합니다. 만약 아래와 같은 창이 뜬다면 <strong>엑세스 허용</strong>을 누릅니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/firewall.png"><img alt="_images/firewall.png" src="_images/firewall.png" style="width: 80%;" /></a>
+</section>
+<section id="id3">
+<h2>내 컴퓨터의 주소 찾기 (선택사항)<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>내 컴퓨터의 주소 찾기</strong> 스프라이트를 클릭하고, 아래의 코드 블록을 각각 클릭합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/rm2.png"><img alt="_images/rm2.png" src="_images/rm2.png" style="width: 100%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>내 컴퓨터</strong> 블록은 <strong>#주소</strong>라는 값을 가지므로, <strong>#주소</strong>라고 바로 타이핑해도 됩니다.</p>
+</div>
+</section>
+<section id="id4">
+<h2>내 컴퓨터로 접속하기 (선택사항)<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>내 컴퓨터에 접속할 컴퓨터</strong>에서 <strong>내 컴퓨터로 접속하기</strong> 스프라이트를 클릭합니다. 아래의 코드 블록에서 <strong>192.168.0.37:9998</strong> 대신에 <strong>내 컴퓨터</strong>의 주소를 입력한 후 각 블록들을 실행합니다.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/rm3.png"><img alt="_images/rm3.png" src="_images/rm3.png" style="width: 100%;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><strong>내 컴퓨터</strong>의 <strong>Data 폴더</strong>에 <strong>내 점수</strong>, <strong>50000</strong>이 저장되었는지 확인합니다.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>접속할 컴퓨터</strong> 블록은 <strong>#주소</strong>라는 값을 가지므로, <strong>#주소</strong>라고 바로 타이핑해도 됩니다.</p>
+<p>컴퓨터 보호를 위해 <strong>데이터 수집 블록</strong>들은 원격으로 실행할 수 없습니다.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,560 @@
+@charset "utf-8";
+.weeklyWrap{margin-top: 20px;}
+.weeklyStatus {background: #fff; border-radius: 5px; position: relative; border:1px solid #C0CCD4}
+.weeklyStatus .weekly_chart_list{overflow: hidden; position: relative}
+.weeklyStatus .weekly_chart_list:before{content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 1px; height: 100%; background: #C0CCD4;}
+.weeklyStatus .weekly_chart_list:after{content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 1px; background: #C0CCD4;}
+.weeklyStatus .chart_box{float: left; width: 50%; height: 218px; padding: 15px 5px 10px;}
+.weeklyStatus .chart_box .tit{font-size: 14px; color:#000; font-weight: 700; padding-left: 5px}
+.weeklyStatus .chart_box canvas{height: 145px !important;}
+.weeklyStatus .chart_box .remarks{text-align: center; margin-top: 5px}
+.weeklyStatus .chart_box .remarks ul{display: inline-block; margin: auto; text-align: center}
+.weeklyStatus .chart_box .remarks li{ display: inline-block; font-size: 11px; color:#999; font-weight: 400;}
+.weeklyStatus .chart_box .remarks li + li{margin-left: 8px}
+.weeklyStatus .chart_box .remarks li img{ margin-right: 5px; vertical-align: middle}
+.weeklyStatus .info_box{background: #E3DDD1; padding: 1px 10px 10px;}
+.weeklyStatus .chart_box:nth-of-type(2) .remarks li + li{margin-left: 2px}
+
+.weeklyStatus .weekly_chart_btn{display: none;}
+
+@media (max-width: 767px) {
+	.weeklyStatus{border: none; background: none}
+	.weeklyStatus .weekly_chart_list:before, .weeklyStatus .weekly_chart_list:after{display: none}
+	.weeklyStatus .chart_box{float: none; width: 100%; padding: 0; background: none; height: auto; margin-bottom: 5px}
+	.weeklyStatus .chart_box .inner{display: none; background: #fff; padding: 20px 10px;}
+	.weeklyStatus .weekly_chart_btn{display: block; border: none; outline: 0; padding: 10px; background: #fff; width: 100%; border-radius: 5px; font-size: 13px; font-weight: 700 }
+	.weeklyStatus .chart_box:nth-of-type(1) .weekly_chart_btn{color: #9D9D9D;}
+	.weeklyStatus .chart_box:nth-of-type(2) .weekly_chart_btn{color: #4EA5A8;}
+	.weeklyStatus .chart_box:nth-of-type(3) .weekly_chart_btn{color: #4677C2;}
+	.weeklyStatus .chart_box:nth-of-type(4) .weekly_chart_btn{color: #706092;}
+
+
+	.weeklyStatus .chart_box.on .inner{display: block}
+	.weeklyStatus .chart_box.on:nth-of-type(1) .weekly_chart_btn{background: #9D9D9D; color:#fff}
+	.weeklyStatus .chart_box.on:nth-of-type(2) .weekly_chart_btn{background: #4EA5A8; color:#fff}
+	.weeklyStatus .chart_box.on:nth-of-type(3) .weekly_chart_btn{background: #4677C2; color:#fff}
+	.weeklyStatus .chart_box.on:nth-of-type(4) .weekly_chart_btn{background: #706092; color:#fff}
+
+	.weeklyStatus .chart_box canvas{display: none}
+	.weeklyStatus .chart_box.on canvas{display: block}
+
+}
+
+/* corona chart */
+.c_chart .cc_graph {position:relative;}
+
+.c_chart .cc_graph .axis_label > div > span {display:block; font-size:11px; line-height:15px;}
+.c_chart .cc_graph .axis_label > div > em {display:block; font-size:11px; line-height:15px; color:#777;}
+.c_chart .cc_graph .axis_label .al_x_l {position:absolute; left:0; bottom:0; text-align:left;}
+.c_chart .cc_graph .axis_label .al_x_r {position:absolute; right:0; bottom:0; text-align:right;}
+.c_chart .cc_graph .axis_label .al_y_l {position:absolute; left:0; top:0; text-align:left;}
+.c_chart .cc_graph .axis_label .al_y_r {position:absolute; right:0; top:0; text-align:right;}
+
+.c_chart .cc_legend { text-align:center; margin:15px 0;}
+.c_chart .cc_legend * {vertical-align:middle;}
+.c_chart .cc_legend > div {display:inline-block; padding:2px 8px;}
+.c_chart .cc_legend > div > i {display:inline-block; width:20px; height:20px;}
+.c_chart .cc_legend > div > span {display:inline-block; font-size:12px; line-height:20px; padding-left:4px;}
+
+.c_chart_is {position:relative; padding:58px 0 27px 0;}
+.c_chart_is .cc_graph {height:100px;}
+.c_chart_is .cc_figure {position:absolute; left:0; top:0; width:100%;}
+.c_chart_is .cc_figure p {display:block; font-size:0; line-height:0; width:80px; position:absolute; text-align:center;}
+.c_chart_is .cc_figure .numinfo1 {right:50%; top:37px; margin-right:43px; width: 85px}
+.c_chart_is .cc_figure .numinfo2 {left:50%; top:7px; margin-left:-40px;}
+.c_chart_is .cc_figure .numinfo3 {left:50%; top:37px; margin-left:32px; width: 98px}
+.c_chart_is .cc_figure .numinfo1_refer{position: absolute; display:block; font-size:10px; line-height:1.25em; letter-spacing:  -0.085em; text-align: center; top: 164px; left: 50%; transform: translateX(-50%); width: 100%;}
+.c_chart_is .cc_figure p * {vertical-align:middle;}
+.c_chart_is .cc_figure p .num_tit {display:inline-block; font-size:11px; line-height:15px; font-weight:400;}
+.c_chart_is .cc_figure p .num_rnum {display:inline-block; font-family:'Century Gothic'; font-size:16px; font-weight:600; line-height:20px; letter-spacing:0; color:#174069;}
+.c_chart_is .cc_figure p em {display:inline-block; font-size:12px; line-height:16px; margin-left:2px;}
+.c_chart_is .cc_figure p .num_percentage {display:inline-block; font-family:'Century Gothic'; font-size:12px; font-weight:600; line-height:15px; letter-spacing:0; color:#174069;}
+
+.c_chart_rpr_A {margin-top:24px;}
+.c_chart_rpr_A .cc_graph {height:170px; margin:0 auto;}
+.mainlive_container .c_chart_rpr_A {margin-top:0;}
+.mainlive_container .c_chart_rpr_A .cc_graph {height:170px;}
+
+.c_chart_rpr_B {padding:10px 0;}
+.c_chart_rpr_B .cc_graph {height:220px;}
+
+.c_chart_gir {padding:10px 0;}
+.c_chart_gir .cc_graph {height:220px;}
+
+.c_chart.c_chart_wps {padding:20px 17px 20px;}
+.c_chart.c_chart_wps .cc_graph {height:200px; padding:0;}
+.c_chart.c_chart_wps .cc_graph .axis_label span {display:inline-block;}
+.c_chart.c_chart_wps .cc_graph .cca_complete_day {color:#009ec5;}
+.c_chart.c_chart_wps .cc_graph .cca_confirm_day {color:#329a00;}
+.c_chart.c_chart_wps .cc_graph .cca_cure_total {color:#2a74d4;}
+.c_chart.c_chart_wps .cc_graph .cca_complete_total {color:#344d8e;}
+.c_chart.c_chart_wps .cc_legend { background: #eee; border-radius: 5px; font-size: 12px; color:#333; overflow: hidden; padding: 8px 8px; line-height: 18px}
+.c_chart.c_chart_wps .cc_legend > div{ float: left; }
+.c_chart.c_chart_wps .cc_legend > div img{margin-left: 2px;}
+.c_chart.c_chart_wps .cc_legend > div:nth-of-type(1){width: 59%}
+.c_chart.c_chart_wps .cc_legend > div:nth-of-type(2){width: 41%; position: relative}
+.c_chart.c_chart_wps .cc_legend > div:nth-of-type(2):before{content: ''; position: absolute; left:0; top: 50%; transform: translate(-50%, -50%); width: 1px ;height: 10px; background: #ccc;}
+.c_chart.c_chart_wps .cc_legend > div li{ display: inline-block; font-weight: 500}
+.c_chart.c_chart_wps .cc_legend > .bar li + li{margin-left: 3px}
+.c_chart.c_chart_wps .cc_legend > div:nth-of-type(2) > *{display: inline-block}
+
+.c_chart.c_chart_npt {margin-top:16px;}
+.c_chart.c_chart_npt .cc_graph {height:480px; padding:10px 0 0 0;}
+.c_chart.c_chart_npt .cc_legend .ccl_korea i {background:url(../image/chart/legend_npt_korea.png) no-repeat center center;}
+.c_chart.c_chart_npt .cc_legend .ccl_china i {background:url(../image/chart/legend_npt_china.png) no-repeat center center;}
+.c_chart.c_chart_npt .cc_legend .ccl_italy i {background:url(../image/chart/legend_npt_italy.png) no-repeat center center;}
+.c_chart.c_chart_npt .cc_legend .ccl_iran i {background:url(../image/chart/legend_npt_iran.png) no-repeat center center;}
+.c_chart.c_chart_npt .cc_legend .ccl_spain i {background:url(../image/chart/legend_npt_spain.png) no-repeat center center;}
+.c_chart.c_chart_npt .cc_legend .ccl_france i {background:url(../image/chart/legend_npt_france.png) no-repeat center center;}
+.c_chart.c_chart_npt .cc_legend .ccl_germany i {background:url(../image/chart/legend_npt_germany.png) no-repeat center center;}
+.c_chart.c_chart_npt .cc_legend .ccl_america i {background:url(../image/chart/legend_npt_america.png) no-repeat center center;}
+.c_chart.c_chart_npt .cc_legend .ccl_switzerland i {background:url(../image/chart/legend_npt_switzerland.png) no-repeat center center;}
+.c_chart.c_chart_npt .cc_legend .ccl_uk i {background:url(../image/chart/legend_npt_uk.png) no-repeat center center;}
+
+.c_chart.c_chart_rps_B {margin-top:16px;}
+.c_chart.c_chart_rps_B .cc_graph {height:480px; padding:0 20px 0 0;}
+.c_chart.c_chart_rps_B .cc_graph .axis_label .al_x_r {margin:0 0 5px 0;}
+
+.c_chart.c_chart_pt {margin-top:24px;}
+.c_chart.c_chart_pt .cc_graph {height:320px; padding-top:25px;}
+.c_chart.c_chart_pt .cc_graph .cca_total {color:#3571cc;}
+.c_chart.c_chart_pt .cc_graph .cca_day {color:#e04f22;}
+.c_chart.c_chart_pt .cc_legend .ccl_total i {background:url(../image/chart/legend_pt_total.png) no-repeat center center;}
+.c_chart.c_chart_pt .cc_legend .ccl_day i {background:url(../image/chart/legend_pt_day.png) no-repeat center center;}
+
+.c_chart.c_chart_ct {margin-top:24px;}
+.c_chart.c_chart_ct .cc_graph {height:320px; padding-top:25px;}
+.c_chart.c_chart_ct .cc_graph .cca_total {color:#e0217b;}
+.c_chart.c_chart_ct .cc_graph .cca_day {color:#1f7ccb;}
+.c_chart.c_chart_ct .cc_legend .ccl_total i {background:url(../image/chart/legend_ct_total.png) no-repeat center center;}
+.c_chart.c_chart_ct .cc_legend .ccl_day i {background:url(../image/chart/legend_ct_day.png) no-repeat center center;}
+
+/* regional incidence ratio - donut */
+[class^="regional_incidence_ratio"] {position:relative; width:160px; height:160px; margin:0 auto; padding:28px;}/* padding:40px 0 16px 0; */
+[class^="regional_incidence_ratio"] > svg {width:104px; height:104px;}
+[class^="regional_incidence_ratio"] > svg > path:first-child {stroke-width:20px; stroke:#e3e3e3; fill:none;}
+[class^="regional_incidence_ratio"] > svg > path:last-child {stroke-width:20px; stroke:#0b9bc9; fill:none;}
+.rir_text {position:absolute; left:0; top:0; width:100%; height:100%; font-size:0; line-height:0; text-align:center;}
+.rir_text::before {display:inline-block; content:''; height:100%; vertical-align:middle;}
+.rir_text > div {display:inline-block; vertical-align:middle;}
+.rir_text > div > span {display:block; font-size:12px; line-height:20px; letter-spacing:-0.048em;}
+.rir_text > div > p {display:block; font-family:'Lato'; font-size:24px; line-height:32px;}
+
+/* regional_patient_status_A - map */
+.regional_patient_status_A {display:table; table-layout:fixed; width:100%;  border:1px solid #dcdcdc; margin-top:16px; overflow:hidden}
+.regional_patient_status_A > div {display:table-cell; vertical-align:top; padding:20px 24px;}
+.regional_patient_status_A .rpsa_map {width:65%; padding-bottom:32px;}
+.regional_patient_status_A .rpsa_detail {position:relative; background:#fff; }
+.regional_patient_status_A .rpsa_detail::before { display:block; content:""; position:absolute; left:0; top:-4px; width:1px; height:100%; background-color:#efefef; z-index:2}
+
+.regional_patient_status_A .rpsa_map .rpsam_descript {position:relative; padding-left:24px; font-size:12px; color:#333;} /* line-height:20px; */
+/*.regional_patient_status_A .rpsa_map .rpsam_descript::before {position:absolute; left:0; top:1px; content:"?"; display:block; width:18px; height:18px; border-radius:100%; font-family:'Lato'; font-size:10px; line-height:18px; font-size:12px; font-weight:600; color:#fff; text-align:center; background-color:#006668;}*/
+.regional_patient_status_A .rpsa_map .rpsam_descript::before {position:absolute; left:0; top:2px; content:""; display:block; width:16px; height:16px; background:url(../image/sub_cmn/ico_rss_alert.png) no-repeat center center;}
+.regional_patient_status_A .rpsa_map .rpsam_descript .info {color:#666; display:block; padding-top:2px}
+
+.regional_patient_status_A .rpsa_map .rpsam_graph {position:relative; width:400px; margin:0 auto;}
+.regional_patient_status_A .rpsa_map .rpsam_graph svg {display:block; width:100%; height:530px;}
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city^="map_city"] {border:0; position:absolute; display:block; margin:0; padding:4px 8px; background:#fff; text-align:center; box-shadow:2px 2px 4px rgba(100, 100, 100, 0.2); border-radius:2px;}
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city^="map_city"] .name {display:block; font-size:11px; line-height:15px; color:#333; font-weight:700;}
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city^="map_city"] .num {display:block; font-family:'Lato'; font-size:14px; line-height:18px; letter-spacing:0; font-weight:bold; color:#000; margin-top:2px;}
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city^="map_city"] .before {display:block; font-family:'Lato'; font-size:12px; line-height:14px; letter-spacing:0; color:#333;}
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city^="map_city"].select {background:#141414; z-index: 10;}
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city^="map_city"].select .name {color:#fff;}
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city^="map_city"].select .num {color:#fff;}
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city^="map_city"].select .before {color:#fbfbfb;}
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city1"]	{left:134px; top:84px;} /*서울*/
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city2"] {left:284px; top:398px;}/*부산*/
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city3"] {left:270px; top:260px;} /*대구*/
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city4"] {left:38px; top:84px;} /*인천*/
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city5"] {left:102px; top:368px;} /*광주*/
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city6"] {left:158px; top:208px;} /*대전*/
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city7"] {left:328px; top:332px;} /*울산*/
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city8"] {left:108px; top:162px;} /*세종*/
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city9"] {left:132px; top:14px;} /*경기*/
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city10"] {left:226px; top:54px;} /*강원*/
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city11"] {left:184px; top:134px;} /*충북*/
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city12"] {left:52px; top:212px;} /*충남*/
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city13"] {left:110px; top:284px;} /*전북*/
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city14"] {left:20px; top:413px;} /*전남*/
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city15"] {left:250px; top:190px;} /*경북*/
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city16"] {left:206px; top:348px;} /*경남*/
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city17"] {left:56px; top:494px;} /*제주*/
+.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city18"] {left:302px; top:464px;} /*검역*/
+
+.regional_patient_status_A .rpsa_detail > div > div {display:none;}
+.regional_patient_status_A .rpsa_detail > div > div.open {display:block;}
+.regional_patient_status_A .rpsa_detail .cityname {display:block; font-size:24px; line-height:32px; font-weight:700; color:#000;}
+.regional_patient_status_A .rpsa_detail .citychart {display:none;}
+.regional_patient_status_A .rpsa_detail .mapview .cityinfo > li {display:table; width:100%; font-size:0; line-height:0;}
+.regional_patient_status_A .rpsa_detail .mapview .cityinfo > li > div {display:table-cell; width:50%; padding:3px 0;}
+.regional_patient_status_A .rpsa_detail .mapview .cityinfo > li > div:last-child {text-align:right;}
+.regional_patient_status_A .rpsa_detail .mapview .cityinfo > li > div > * {display:inline-block; vertical-align:middle;}
+.regional_patient_status_A .rpsa_detail .mapview .cityinfo .tit {font-size:14px; line-height:22px; color:#444; font-weight:500;}
+.regional_patient_status_A .rpsa_detail .mapview .cityinfo .num {font-family:'Lato'; font-size:18px; line-height:22px; font-weight:500; color:#000; margin-bottom:-2px;}
+.regional_patient_status_A .rpsa_detail .mapview .cityinfo > li > div > em {font-size:14px; line-height:22px; color:#666; margin-left:4px;}
+.regional_patient_status_A .rpsa_detail .mapview .cityinfo [class^="sub_"] {font-size:12px; line-height:1;}
+.regional_patient_status_A .rpsa_detail .mapview .cityinfo .sub_tit {color:#666; margin-right:4px;}
+.regional_patient_status_A .rpsa_detail .mapview .cityinfo .sub_tit.red {color:#0097c7;}
+.regional_patient_status_A .rpsa_detail .mapview .cityinfo .sub_num {font-family:'Lato'; font-weight:500;}
+.regional_patient_status_A .rpsa_detail .mapview .cityinfo .sub_num.red {color:#0097c7;}
+
+.regional_patient_status_A .rpsa_detail .rpsad_legend {position:absolute; bottom:20px; left:24px;}
+.regional_patient_status_A .rpsa_detail .rpsad_legend > li {padding:4px; padding-left:24px; font-size:12px; line-height:20px; color:#333; word-break:keep-all;}
+.regional_patient_status_A .rpsa_detail .rpsad_legend > li > span {color:#000; font-weight:700;}
+.regional_patient_status_A .rpsa_detail .rpsad_legend > li::before {content:""; display:block; position:absolute; left:0; top:5px; width:18px; height:18px; font-family:'Lato'; font-size:10px; line-height:18px; color:#fff; text-align:center; background:#8e7c7c; border-radius:100%;}
+.regional_patient_status_A .rpsa_detail .rpsad_legend > li:nth-child(1)::before {content:"1";}
+.regional_patient_status_A .rpsa_detail .rpsad_legend > li:nth-child(2)::before {content:"2";}
+
+.regional_patient_status_A .rpsa_detail .rpsad_legend > li > span.lh_16 {line-height:16px; display:block; margin-top:10px;  color:#333; font-weight:500;}
+
+.mainlive_container .regional_patient_status_A {margin-top:6px; border:0; border-radius: 5px}
+.mainlive_container .regional_patient_status_A .rpsa_map {background:#fff;}
+.mainlive_container .regional_patient_status_A .rpsa_map .rpsam_graph {margin-top:-17px;}
+.mainlive_container .regional_patient_status_A .rpsa_detail {padding:12px 16px;}
+.mainlive_container .regional_patient_status_A .rpsa_detail h3 { width:100%; padding:12px 0 12px 72px; z-index:1}
+.mainlive_container .regional_patient_status_A .rpsa_detail h3 > .title { padding-left:8px; padding-right:8px; color:#333; line-height:20px;/*  border:1px solid #c27171; */}
+.mainlive_container .regional_patient_status_A .rpsa_detail h3 > .title > span { display:inline-block;vertical-align:middle;}
+.mainlive_container .regional_patient_status_A .rpsa_detail .info_map_btn { display:inline-block; margin-left:4px; width:16px; height:16px; text-align:center; background-color:#006766; color:#fff; font-size:12px; font-weight:400; line-height:16px; border-radius:13px;vertical-align:middle;}
+.mainlive_container .regional_patient_status_A .rpsa_detail .info_map_script { display:none;  position:absolute; left:50%; top:54px; width:160px; margin-left:-70px; z-index:2}
+.mainlive_container .regional_patient_status_A .rpsa_detail .info_map_script > a { display:block; width:100%; height:auto; padding:6px 10px; font-size:13px; line-height:1.25em; text-align:left; border:1px solid #98baba; background-color:#fff; color:#666; border-radius:6px;}
+.mainlive_container .regional_patient_status_A .rpsa_detail .cityname {position:absolute; top:20px; left:20px; font-size:26px; font-weight:600; color:#000; z-index:2}
+.mainlive_container .regional_patient_status_A .rpsa_detail .mapview .cityinfo {width:100%;}
+
+@media (min-width:1180px) {
+	.mainlive_container .regional_patient_status_A {height:619px;}
+	.regional_patient_status_A .rpsa_detail::before { min-height:619px; }
+}
+@media (min-width:768px) and (max-width:1179px) {
+	.regional_patient_status_A .rpsa_detail::before { min-height:619px;}
+}
+@media (max-width:767px) {
+	.regional_patient_status_A,
+	.regional_patient_status_A > div {display:block;}
+	.regional_patient_status_A .rpsa_map {width:100%;}
+	.regional_patient_status_A .rpsa_map .rpsam_graph {width:280px;}
+	.regional_patient_status_A .rpsa_map .rpsam_graph svg {height:371px;}
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city1"] {left:104px; top:66px;} /*서울*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city2"] {left:184px; top:278px;}/*부산*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city3"] {left:178px; top:204px;} /*대구*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city4"] {left:26px; top:40px;} /*인천*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city5"] {left:74px; top:268px;} /*광주*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city6"] {left:110px; top:134px;} /*대전*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city7"] {left:230px; top:244px;} /*울산*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city8"] {left:64px; top:106px;} /*세종*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city9"] {left:74px; top:12px;} /*경기*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city10"] {left:184px; top:16px;} /*강원*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city11"] {left:152px; top:88px;} /*충북*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city12"] {left:16px; top:148px;} /*충남*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city13"] {left:70px; top:192px;} /*전북*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city14"] {left:0px; top:258px;} /*전남*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city15"] {left:192px; top:134px;} /*경북*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city16"] {left:134px; top:248px;} /*경남*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city17"] {left:44px; top:336px;} /*제주*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city18"] {left:220px; top:322px;} /*검역*/
+
+	.regional_patient_status_A .rpsa_detail .cityname {font-size:18px; line-height:26px;}
+	.regional_patient_status_A .rpsa_detail .mapview .cityinfo {width:100%;}
+	.regional_patient_status_A .rpsa_detail .rpsad_legend {position:relative; left:0; top:0; margin-top:24px;}
+
+	.regional_patient_status_A .rpsa_detail::before { display:none}
+}
+
+.c_chart.c_chart_dp {margin-top:24px;}
+.c_chart.c_chart_dp .cc_graph {height:480px; padding-top:24px;}
+.c_chart.c_chart_nptb {margin-top:24px;}
+.c_chart.c_chart_nptb .cc_graph {height:480px;}
+.c_chart.c_chart_nptd {margin-top:24px;}
+.c_chart.c_chart_nptd .cc_graph {height:480px; padding-top:24px;}
+
+
+
+
+
+/* regional_step_status - map */
+.regional_step_status {display:table; table-layout:fixed; width:100%;  border:1px solid #dcdcdc; margin-top:16px;}
+.regional_step_status > div {position:relative; display:table-cell; vertical-align:top; padding:20px 24px;}
+.regional_step_status .rss_map {width:65%; padding-bottom:32px; border-top:4px solid #164068}
+.regional_step_status .rss_detail {position:relative; background:#fff; border-top:4px solid #164068;}
+.regional_step_status .rss_detail::before {display:block; content:""; position:absolute; left:0; top:-4px; width:1px; height:100%; background-color:#efefef; z-index:2}
+
+.regional_step_status .rss_map [class^="rssm_descript_"] {position:relative; padding-left:22px; font-size:12px; line-height:20px; color:#333;}
+.regional_step_status .rss_map [class^="rssm_descript_"]::before {position:absolute; left:0; top:2px; content:""; display:block; width:16px; height:16px;}
+.regional_step_status .rss_map .rssm_descript_1::before {background:url(../image/sub_cmn/ico_rss_alert.png) no-repeat center center;}
+.regional_step_status .rss_map .rssm_descript_2::before {background:url(../image/sub_cmn/ico_rss_caution.png) no-repeat center center;}
+
+.regional_step_status .rss_map .rssm_legend {position:absolute; right:24px; bottom:20px;}
+.regional_step_status .rss_map .rssm_legend > ul::after {display:block; content:''; clear:both;}
+.regional_step_status .rss_map .rssm_legend > ul > li {float:left; width:24px; text-align:center; margin-left:2px;}
+.regional_step_status .rss_map .rssm_legend > ul > li > i {display:block; height:12px;}
+.regional_step_status .rss_map .rssm_legend > ul > li > span {display:block; font-family:'Lato'; font-size:10px; line-height:18px; color:#444; margin-top:2px;}
+
+/* .regional_step_status .rss_map .rssm_legend > ul > li:nth-child(1) > i {background:#d2f0fb;} */
+.regional_step_status .rss_map .rssm_legend > ul > li:nth-child(1) > i {background:#4088da;}
+.regional_step_status .rss_map .rssm_legend > ul > li:nth-child(2) > i {background:#ffb911;}
+.regional_step_status .rss_map .rssm_legend > ul > li:nth-child(3) > i {background:#fc7001;}
+.regional_step_status .rss_map .rssm_legend > ul > li:nth-child(4) > i {background:#e60000;}
+
+.regional_step_status .rss_map .rssm_graph {position:relative; width:400px; margin:0 auto;}
+.regional_step_status .rss_map .rssm_graph svg {display:block; width:100%; height:530px;}
+.regional_step_status .rss_map .rssm_graph button[data-city^="step_map_city"] {border:0; position:absolute; display:block; margin:0; padding:4px 8px; background:#fff; text-align:center; box-shadow:2px 2px 4px rgba(100, 100, 100, 0.2); border-radius:2px;}
+.regional_step_status .rss_map .rssm_graph button[data-city^="step_map_city"] .name {position:relative; display:inline-block; font-size:11px; line-height:20px; color:#444; font-weight:700;}
+.regional_step_status .rss_map .rssm_graph button[data-city^="step_map_city"] .name.caution {padding-right:16px;}
+.regional_step_status .rss_map .rssm_graph button[data-city^="step_map_city"] .name.caution::before {display:block; content:''; width:16px; height:16px; position:absolute; right:0; top:2px; background:url(../image/sub_cmn/ico_rss_caution.png) no-repeat center center;}
+.regional_step_status .rss_map .rssm_graph button[data-city^="step_map_city"] .num {display:block; font-family:'Lato'; font-size:20px; line-height:28px; letter-spacing:0; font-weight:bold; color:#000;}
+.regional_step_status .rss_map .rssm_graph button[data-city^="step_map_city"].select {background:#141414;}
+.regional_step_status .rss_map .rssm_graph button[data-city^="step_map_city"].select .name {color:#fff;}
+.regional_step_status .rss_map .rssm_graph button[data-city^="step_map_city"].select .num {color:#fff;}
+.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city1"]	{left:134px; top:84px;} /*서울*/
+.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city2"]	{left:284px; top:398px;}/*부산*/
+.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city3"]	{left:270px; top:260px;} /*대구*/
+.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city4"]	{left:38px; top:84px;} /*인천*/
+.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city5"]	{left:102px; top:368px;} /*광주*/
+.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city6"]	{left:158px; top:208px;} /*대전*/
+.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city7"]	{left:328px; top:352px;} /*울산*/
+.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city8"]	{left:108px; top:162px;} /*세종*/
+.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city9"]	{left:132px; top:14px;} /*경기*/
+.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city10"]	{left:226px; top:54px;} /*강원*/
+.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city11"]	{left:184px; top:134px;} /*충북*/
+.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city12"]	{left:52px; top:212px;} /*충남*/
+.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city13"]	{left:110px; top:284px;} /*전북*/
+.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city14"]	{left:40px; top:392px;} /*전남*/
+.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city15"]	{left:250px; top:190px;} /*경북*/
+.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city16"]	{left:206px; top:348px;} /*경남*/
+.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city17"]	{left:56px; top:494px;} /*제주*/
+
+.regional_step_status .rss_detail > div > div {display:none;}
+.regional_step_status .rss_detail > div > div.open {display:block;}
+.regional_step_status .rss_detail .rssd_title_1 {display:block; font-size:24px; line-height:32px; font-weight:700; color:#222;}
+.regional_step_status .rss_detail .rssd_title_2 {position:relative; display:block; font-size:17px; line-height:24px; font-weight:700; color:#222; margin-top:6px;}
+.regional_step_status .rss_detail .rssd_title_2[data-step="1"],
+.regional_step_status .rss_detail .rssd_title_2[data-step="2"],
+.regional_step_status .rss_detail .rssd_title_2[data-step="3"],
+.regional_step_status .rss_detail .rssd_title_2[data-step="4"] {padding-left:22px;}
+.regional_step_status .rss_detail .rssd_title_2[data-step="1"]::before,
+.regional_step_status .rss_detail .rssd_title_2[data-step="2"]::before,
+.regional_step_status .rss_detail .rssd_title_2[data-step="3"]::before,
+.regional_step_status .rss_detail .rssd_title_2[data-step="4"]::before {display:inline-block; content:''; width:14px; height:14px; border-radius:100%; position:absolute; left:0; top:6px; background:#ddd; vertical-align:middle}
+.regional_step_status .rss_detail .rssd_title_2[data-step="1"]::before	{background:#4088da;}
+.regional_step_status .rss_detail .rssd_title_2[data-step="2"]::before		{background:#ffb911;}
+.regional_step_status .rss_detail .rssd_title_2[data-step="3"]::before	{background:#fc7001;}
+.regional_step_status .rss_detail .rssd_title_2[data-step="4"]::before		{background:#e60000;}
+.regional_step_status .rss_detail .rssd_descript {display:block; margin-top:2px; font-size:13px; line-height:20px; color:#666; padding:1px 0;}
+.regional_step_status .rss_detail .rssd_list {margin-top:4px;}
+.regional_step_status .rss_detail .rssd_list > li {position:relative; font-size:13px; line-height:21px; color:#666; padding:1px 0; padding-left:12px;}
+.regional_step_status .rss_detail .rssd_list > li::before {display:block; content:''; width:6px; height:1px; background:#ddd; position:absolute; left:0; top:11px;}
+
+.mainlive_container .regional_step_status {margin-top:6px; border:0;}
+.mainlive_container .regional_step_status .rss_map {background:#fff;}
+.mainlive_container .regional_step_status .rss_map .rssm_graph {margin-top:-17px;}
+.mainlive_container .regional_step_status .rss_detail { padding: 0; }
+.mainlive_container .regional_step_status .rss_detail > div{padding: 16px 20px; height: 100%; overflow-y: auto;}
+
+.mainlive_container .regional_step_status .rss_detail > div::-webkit-scrollbar { width: 6px; /*스크롤바의 너비*/ }
+.mainlive_container .regional_step_status .rss_detail > div::-webkit-scrollbar-thumb { background-color: #9cafc0; /*스크롤바의 색상*/ }
+.mainlive_container .regional_step_status .rss_detail > div::-webkit-scrollbar-track { background-color: #ddd; /*스크롤바 트랙 색상*/ }
+.mainlive_container .regional_step_status .rss_detail > div::-webkit-scrollbar-button { width: 0; height: 0; }
+
+@media (min-width:1180px) {
+	.mainlive_container .regional_step_status {height:619px;}
+	.regional_step_status .rss_detail::before {min-height:619px;}
+	.regional_step_status .rss_detail .rssd_descript { line-height:19px; word-wrap: break-word; word-break:keep-all; }
+}
+@media (min-width:768px) and (max-width:1179px) {
+	.regional_step_status .rss_detail::before {min-height:619px;}
+}
+@media (max-width:767px) {
+	.regional_step_status,
+	.regional_step_status > div {display:block;}
+	.regional_step_status .rss_map {width:100%;}
+	.regional_step_status .rss_map .rssm_graph {width:280px;}
+	.regional_step_status .rss_map .rssm_graph svg {height:371px;}
+	.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city1"] {left:104px; top:66px;} /*서울*/
+	.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city2"] {left:184px; top:278px;}/*부산*/
+	.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city3"] {left:178px; top:204px;} /*대구*/
+	.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city4"] {left:26px; top:40px;} /*인천*/
+	.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city5"] {left:74px; top:268px;} /*광주*/
+	.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city6"] {left:110px; top:134px;} /*대전*/
+	.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city7"] {left:230px; top:244px;} /*울산*/
+	.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city8"] {left:64px; top:106px;} /*세종*/
+	.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city9"] {left:74px; top:12px;} /*경기*/
+	.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city10"] {left:184px; top:16px;} /*강원*/
+	.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city11"] {left:152px; top:88px;} /*충북*/
+	.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city12"] {left:16px; top:148px;} /*충남*/
+	.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city13"] {left:70px; top:192px;} /*전북*/
+	.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city14"] {left:0px; top:258px;} /*전남*/
+	.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city15"] {left:192px; top:134px;} /*경북*/
+	.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city16"] {left:134px; top:248px;} /*경남*/
+	.regional_step_status .rss_map .rssm_graph button[data-city="step_map_city17"] {left:44px; top:336px;} /*제주*/
+	.regional_step_status .rss_detail::before {display:none;}
+}
+
+/* ncov tab list */
+
+
+
+.liveToggleOuter .live_right{position:relative;height:541px}
+.ncov_tab_list>ul>li{float:left}
+.ncov_tab_list>ul>li>.ncov_tab_content{display:none;width:100%}
+.ncov_tab_list>ul>li:first-child>.ncov_tab_content{display:block}
+.ncov_tab_list>ul>li>.ncov_tab_content.on{display:block}
+.regional_patient_status_A .rpsa_map,
+.mainlive_container .regional_step_status .rss_map,
+.mainlive_container .regional_step_status .rss_detail{text-align:left}
+.regional_patient_status_A .rpsa_map .rpsam_descript{line-height:normal}
+
+.live_regional_title {display:block; margin-top:6px;}
+.live_regional_title span,
+.live_regional_title em {display:inline-block; vertical-align:middle;}
+.live_regional_title span {font-size:16px; line-height:24px; font-weight:700; color:#164068;}
+.live_regional_title em {font-size:14px; line-height:22px; font-weight:400; padding-left:6px; color:#778898;}
+
+.ncov_lt_p .ncov_lt_l {display:block; padding:6px 20px 6px 6px; background:url(../image/sub_cmn/faq_arrow_down.png) no-repeat right center #fff; border:1px solid #a4c3ef; text-align: center; background-color: #fff; border-radius: 6px; margin-top:6px;}
+.ncov_lt_p.open .ncov_lt_l {background-image:url(../image/sub_cmn/faq_arrow_up.png);}
+.ncov_lt_p .ncov_lt_l span,
+.ncov_lt_p .ncov_lt_l em {font-size:14px; line-height:22px; font-weight:700; color: #0064af; vertical-align:middle; padding:0 2px;}
+.ncov_lt_p .txt_open {display:inline;}
+.ncov_lt_p .txt_close {display:none;}
+.ncov_lt_p.open .txt_open {display:none;}
+.ncov_lt_p.open .txt_close {display:inline;}
+
+/* tab, list toggle */
+@media (min-width:1180px) {
+	/*.ncov_tab_common .ncov_tab_content 	{width:0; height:0; overflow:hidden;}*/
+	.ncov_tab_common .ncov_tab_content.on {width:100%; height:auto; overflow:initial;}
+
+	.ncov_lt_p .ncov_lt_l,
+	.live_regional_title {display:none;}
+
+	.liveTest.main_box_toggle,
+	.liveWeek.main_box_toggle{display:table !important}
+}
+@media (min-width:768px) and (max-width:1179px) {
+	.ncov_tab_common .ncov_tab_content 	{width:0; height:0; overflow:hidden;}
+	.ncov_tab_common .ncov_tab_content.on {width:100%; height:auto; overflow:initial;}
+
+	.ncov_lt_p .ncov_lt_l,
+	.live_regional_title {display:none;}
+
+	.ncov_tab_list{height:645px}
+}
+@media (max-width:767px) {
+	/*.ncov_tab_common .ncov_tab_list {display:none;}*/
+	.live_right{height:auto !important}
+	.ncov_tab_common .ncov_tab_list{display:block}
+	.ncov_tab_list>ul{height:auto;border:0;width:100%;background:none;text-align:left}
+	.ncov_tab_list>ul>li,
+	.ncov_tab_list>ul>li:first-child{margin:5px 0 0;width:100%}
+	.ncov_tab_list>ul>li:first-child{margin-top:0}
+	.ncov_tab_list>ul>li>a{display:none}
+	.ncov_tab_list>ul>li>.ncov_tab_content{display:block;position:relative;left:auto;top:auto}
+	.ncov_lt_p .ncov_lt_l{width:100%;margin-top:0}
+
+	.ncov_lt_p .ncov_lt_c {width:100%; height:0; overflow:hidden; transition:height 0.25s ease-out;}
+	.ncov_lt_p.open .ncov_lt_c {width:100%; height:auto; overflow:initial;}
+
+
+
+
+}
+
+/*20210518 시도별발생현황 레이어 팝업 추가 */
+/*.zone_popup{position:absolute; width:calc(100% - 1px);  height:620px; z-index:1000; top:0; left:1px; background:#fff}*/
+.zone_popup{position:absolute; width:100%;  height:620px; z-index:1000; top:-2px; left:0; background:#fff; border-left:1px solid #ddd}
+.popup_top{position:relative; display:block; width:100%; height:55px; padding:0; background:#164068; color:#fff}
+.popup_top li{display:block; float:left; height:100%; box-sizing:border-box}
+.popup_top li:nth-child(1){width:calc(100% - 55px); font-weight:500; font-size:20px;line-height:55px; padding-left:15px;}
+.popup_top li:nth-child(2){width:55px; background:url(../image/content/popup_close.png) center no-repeat}
+.popup_top li:nth-child(2) a{display:block; width:100%; height:100%; text-indent:-9999px}
+.popup_top li:nth-child(2) a:hover{cursor:pointer}
+
+.z_list_top{position:relative; display:block; height:65px; padding:0; }
+.z_list_top li{display:block; height:100%; font-weight:600;font-size:30px; color:#000; box-sizing:border-box; line-height:65px;}
+.z_list_top li:nth-child(1){width:40%; padding-left:20px;float:left}
+.z_list_top li:nth-child(2){width:55%; float:right; text-align:right; padding-right:20px}
+.z_list_top li:nth-child(2) span{color:#444; font-size:18px}
+
+.z_list{display:block!important; height:490px; border-top:2px solid #6d88b7; overflow-y:auto}
+.z_list table{width:100%;border-collapse:collapse;line-height:20px; }
+.z_list th{padding:7px; border-bottom:1px solid #c8c8c8;font-size:14px;text-align:center; background:#f7faff; box-sizing:border-box; color:#000; font-weight:600}
+.z_list td{padding:5px 10px; font-size:14px; box-sizing:border-box}
+
+
+.z_list tr th:nth-child(2){border-left:1px dotted #ddd}
+.z_list tr td:nth-child(1){text-align:center}
+.z_list tr td:nth-child(2){border-left:1px dotted #ddd; text-align:right}
+.z_list table:nth-child(2) tr th:nth-child(1){border-left:1px solid #bad2ea}
+.z_list table:nth-child(2) tr td:nth-child(1){border-left:1px solid #bad2ea}
+
+.z_list td{border-bottom:1px solid #eee}
+.z_list tr td a{color:#444}
+.z_list tr td a:hover,.faq3 tr td a:focus{text-decoration:none}
+.z_list .left{text-align:left}
+.z_list .bold{font-weight:600}
+.z_list th.l_line{border-left:1px solid #ddd!important}
+
+/* 테이블양쪽에 두개로 갈 경우 */
+.z_list.type_02 table{width:50%; float:left}
+
+/* 확진자현황 상세보기 버튼 */
+.t_mini_01{display: block; width:100%; background:#3f5378 url(../image/content/popup_btn.png) no-repeat 93% center; color:#fff; font-size:14px; line-height:18px; padding:10px 100px 10px 18px; box-sizing:border-box; margin:20px auto; border:0; text-align:left}
+.t_mini_01:hover{cursor:pointer;  background:#3f5378 url(../image/content/popup_btn.png) no-repeat 96% center; transition:all .2s}
+
+@media (max-width:1084px) {
+
+	.popup_top{background:#fff; color:#222}
+	.popup_top li:nth-child(1){width:calc(100% - 30px); font-size:18px; padding-left:10px; font-weight:600}
+	.popup_top li:nth-child(2){width:30px; background:url(../image/content/popup_close02.png) left center no-repeat}
+
+	.t_mini_01{background:#3f5378; color:#fff; padding:10px; text-align:center}
+	.t_mini_01:hover{background:#3f5378}
+
+}
+
+@media (max-width:920px) {
+	.popup_top li:nth-child(1){line-height:22px; padding:10px}
+}
+
+
+@media (max-width:767px) {
+	.zone_popup{position:relative; height:auto; border-left:none}
+	.popup_top li{line-height:18px;}
+	.popup_top li:nth-child(1){line-height:18px; padding:0}
+	.popup_top li:nth-child(2){background:url(../image/content/popup_close02.png) right top no-repeat}
+
+	.z_list{height:auto}
+	.z_list table{line-height:1.25em}
+	.z_list th{padding:4px 1px; font-size:13px}
+	.z_list td{padding:4px 5px; font-size:13px}
+
+	.z_list_top li:nth-child(1){width:35%; padding-left:0}
+	.z_list_top li:nth-child(2){width:65%; padding-right:0}
+	
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city0"]	{left: -40px;} /*전국1*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city2"] {left: 184px; top: 287px;}/*부산1*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city3"] {left: 178px; top: 189px;} /*대구1*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city4"] {left: 3px; top: 54px;} /*인천1*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city5"] { left: 44px; top: 268px;} /*광주1*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city6"] {left: 129px; top: 134px;} /*대전1*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city7"] { left: 240px; top: 244px;} /*울산1*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city8"] {left: 48px; top: 106px;} /*세종1*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city9"] {left: 74px; top: -4px;} /*경기1*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city11"] { left: 180px; top: 79px;} /*충북1*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city12"] { left: -2px; top: 157px;} /*충남1*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city14"] {left: -25px; top: 258px;} /*전남1*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city15"] {left: 222px; top: 134px;} /*경북1*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city16"] {left: 49px; top: 268px;} /*경남1*/
+	.regional_patient_status_A .rpsa_map .rpsam_graph button[data-city="map_city18"] {left: 220px; top: 344px;} /*검역1*/
+	
+}
+
+@media (max-width:640px) {
+	.z_list table{line-height:1.1em}
+	.z_list th{font-size:12px}
+	.z_list td{font-size:12px}
+}
+
+@media (max-width:400px) {
+	.z_list_top{height:50px}
+	.z_list_top li{font-size:22px; line-height:50px;}
+	.z_list_top li:nth-child(2) span{font-size:14px}
+}
